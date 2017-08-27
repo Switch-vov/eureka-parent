@@ -1,4 +1,4 @@
-package com.switchvov.springcloud.ribbontest.model;
+package com.switchvov.springcloud.model;
 
 public class User {
     private Long id;

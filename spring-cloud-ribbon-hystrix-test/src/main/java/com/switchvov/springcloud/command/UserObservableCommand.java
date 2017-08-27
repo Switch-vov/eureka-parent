@@ -1,7 +1,7 @@
-package com.switchvov.springcloud.ribbontest.command;
+package com.switchvov.springcloud.command;
 
 import com.netflix.hystrix.HystrixObservableCommand;
-import com.switchvov.springcloud.ribbontest.model.User;
+import com.switchvov.springcloud.model.User;
 import org.springframework.web.client.RestTemplate;
 import rx.Observable;
 import rx.Subscriber;

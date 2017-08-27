@@ -1,4 +1,4 @@
-package com.switchvov.springcloud.ribbontest;
+package com.switchvov.springcloud;
 
 // @RunWith(SpringRunner.class)
 // @SpringBootTest
