@@ -12,8 +12,12 @@
     <description>Spring Cloud Eureka 父工程</description>
 
     <modules>
+        <!-- eureka 服务 -->
         <module>eureka-server</module>
+        <!-- hello服务提供者 -->
         <module>spring-cloud-hello</module>
+
+        <!-- hello服务消费者 -->
         <module>spring-cloud-eureka-consumer</module>
         <module>spring-cloud-eureka-consumer-custom-ribbon</module>
         <module>spring-cloud-eureka-consumer-custom-ribbon-properties</module>
@@ -21,6 +25,10 @@
 
         <!-- hystrix 仪表盘 -->
         <module>spring-cloud-hystrix-dashboard</module>
+
+        <!-- turbine 集群监控 -->
+        <module>spring-cloud-hystrix-turbine</module>
+
         <!-- ribbon 测试项目 -->
         <module>spring-cloud-ribbon-hystrix-test</module>
     </modules>
