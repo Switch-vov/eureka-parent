@@ -19,8 +19,9 @@
         <module>spring-cloud-eureka-consumer-custom-ribbon-properties</module>
         <module>spring-cloud-eureka-consumer-custom-ribbon-properties-hystrix</module>
 
-
-        <!--ribbon 测试项目 -->
+        <!-- hystrix 仪表盘 -->
+        <module>spring-cloud-hystrix-dashboard</module>
+        <!-- ribbon 测试项目 -->
         <module>spring-cloud-ribbon-hystrix-test</module>
     </modules>
 

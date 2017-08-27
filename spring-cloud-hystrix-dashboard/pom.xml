@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.switchvov.springcloud</groupId>
-    <artifactId>spring-cloud-eureka-consumer-custom-ribbon-properties-hystrix</artifactId>
+    <artifactId>spring-cloud-hystrix-dashboard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-cloud-eureka-consumer-custom-ribbon-properties-hystrix</name>
-    <description>Spring Cloud Eureka客户端(自定义Ribbon客户端properties) Hystrix</description>
+    <name>spring-cloud-hystrix-dashboard</name>
+    <description>Spring Cloud Hystrix仪表盘</description>
 
     <parent>
         <groupId>com.switchvov.springcloud</groupId>
@@ -20,19 +20,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
