@@ -14,8 +14,13 @@
     <modules>
         <!-- eureka 服务 -->
         <module>eureka-server</module>
+
+        <!-- hello服务接口 -->
+        <module>spring-cloud-hello-service-api</module>
+
         <!-- hello服务提供者 -->
         <module>spring-cloud-hello</module>
+        <module>spring-cloud-hello-feign</module>
 
         <!-- hello服务消费者 -->
         <module>spring-cloud-eureka-consumer</module>
@@ -23,6 +28,7 @@
         <module>spring-cloud-eureka-consumer-custom-ribbon-properties</module>
         <module>spring-cloud-eureka-consumer-custom-ribbon-properties-hystrix</module>
         <module>spring-cloud-eureka-consumer-custom-ribbon-properties-hystrix-rabbitmq</module>
+        <module>spring-cloud-eureka-consumer-custom-feign</module>
 
         <!-- hystrix 仪表盘 -->
         <module>spring-cloud-hystrix-dashboard</module>
