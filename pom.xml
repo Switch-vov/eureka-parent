@@ -37,6 +37,9 @@
         <module>spring-cloud-hystrix-turbine</module>
         <module>spring-cloud-hystrix-turbine-rabbitmq</module>
 
+        <!-- zuul api 网关 -->
+        <module>spring-cloud-zuul-api-gateway</module>
+
         <!-- ribbon 测试项目 -->
         <module>spring-cloud-ribbon-hystrix-test</module>
     </modules>

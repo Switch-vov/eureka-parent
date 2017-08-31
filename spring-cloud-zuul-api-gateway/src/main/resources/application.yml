@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: zuul-api-gateway
+server:
+  port: 10160
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+
+# 面向服务的路由
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: hello-service
+    api-b:
+      path: /api-b/**
+      serviceId: feign-consumer
+
+

@@ -1,0 +1,6 @@
+# 传统路由方式
+zuul:
+  routes:
+    api-a-url:
+      path: /api-a-url/**
+      url: http://localhost:6160/
