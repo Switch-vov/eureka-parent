@@ -4,3 +4,65 @@ zuul:
     api-a-url:
       path: /api-a-url/**
       url: http://localhost:6160/
+    # 下面两种配置等价，当<route>=<serviceId>时
+    # zuul与eureka整合会自动配置映射，serviceId就是路径名
+
+    user-service:
+      path: /user-service/**
+      serviceId: user-service
+    user-service: /user-service/**
+    # ? 匹配任意单个字符
+    # * 匹配任意数量的字符
+    # ** 匹配任意数量的字符，支持多级目录
+
+    # 路由匹配算法匹配请求路径时，是通过线性遍历的方式
+    # 由于properties配置文件无法保证有序
+    # 所以需要使用yaml文件配置来实现有序的路由规则
+    account-service-ext:
+      path: /account-service/ext/**
+      serviceId: account-service-ext
+    account-service:
+      path: /account-service/**
+      serviceId: account-service
+
+    # zuul默认过滤的敏感头信息有Cookie、Set-Cookie、Authorization
+    # 指定路由配置敏感头信息
+    sensitive-service:
+      # 对指定路由开启自定义敏感头
+      customSensitiveHeaders: true
+      # 将指定路由的敏感头设置为空
+      sensitiveHeaders:
+
+    # 指定路由关闭重试机制
+    noretry-service:
+      retryable: false
+
+  # 忽略表达式，忽略/hello接口
+  ignored-patterns: /**/hello/**
+  # 忽略整合eureka自动配置的serviceId
+  ignored-services: *-service
+  # 路由前缀，路由表达式的起始字符串不能与该值相同，也就是path不能以/myapi开头
+  prefix: /myapi
+  # 关闭移除代理前缀
+  strip-prefix: false
+  # 设置Host头信息，标识最初的服务端请求地址
+  # 解决302重定向问题
+  add-host-header: true
+  # 全局关闭重试机制
+  retryable: false
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # HystrixCommand执行超时时间
+            timeoutInMilliseconds: 10000
+
+ribbon:
+  # 连接超时时间
+  connectionTimeout: 5000
+  # 处理超时时间
+  readTimeout: 9000

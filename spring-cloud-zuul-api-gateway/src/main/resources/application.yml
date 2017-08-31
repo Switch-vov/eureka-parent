@@ -17,5 +17,8 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: feign-consumer
-
+    # 本地跳转
+    api-local:
+      path: /api-local/**
+      url: forward:/local
 
