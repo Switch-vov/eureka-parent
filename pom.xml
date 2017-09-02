@@ -15,6 +15,9 @@
         <!-- eureka 服务 -->
         <module>eureka-server</module>
 
+        <!-- config 服务 -->
+        <module>config-server</module>
+
         <!-- hello服务接口 -->
         <module>spring-cloud-hello-service-api</module>
 
