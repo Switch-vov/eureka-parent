@@ -1,0 +1,10 @@
+server:
+  port: 11260
+spring:
+  application:
+    name: switch
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:11160/
