@@ -2,6 +2,7 @@ package com.switchvov.springcloud.auth;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import com.switchvov.springcloud.filter.FilterType;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,7 @@ public class AccessFilter extends ZuulFilter {
 
     @Override
     public String filterType() {
-        return "pre";
+        return FilterType.PRE.type;
     }
 
     @Override

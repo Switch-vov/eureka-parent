@@ -1,0 +1,37 @@
+# ZuulFilter接口
+# filterType: 过滤器类型
+# pre: 可以在请求被路由之前调用
+# routing: 在路由请求时被调用
+# post: 在routing和error过滤器之后被调用
+# error: 处理请求时发生错误时被调用
+#
+# filterOrder: 过滤器执行顺序，数值越小优先级越高
+# shouldFilter: 是否执行该过滤器
+# run: 过滤器的具体逻辑
+
+# zuul wiki网址
+# https://github.com/Netflix/zuul/wiki/How-it-Works
+
+# 核心过滤器
+# pre类型
+# ServletDetectionFilter -3 标记处理Servlet的类型
+# Servlet30WrapperFilter -2 包装HttpServletRequest请求为Servlet30RequestWrapper
+# FormBodyWrapperFilter -1 包装请求体
+# DebugFilter 1 标记调试标志
+# PreDecorationFilter 5 处理请求上下文供后续使用
+#
+# route类型
+# RibbonRoutingFilter 10 serviceId请求转发
+# SimpleHostRoutingFilter 100 url请求转发
+# SendForwardFilter 500 forward请求转发
+#
+# post类型
+# SendErrorFilter 0 处理有错误的请求响应
+# SendResponseFilter 100 处理正常处理的请求响应
+
+# 禁用过滤器AccessFilter=过滤器名，pre=过滤器类型
+zuul:
+  AccessFilter:
+    pre:
+      disable: true
+
