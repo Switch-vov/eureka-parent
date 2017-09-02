@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Switch-vov/eureka-parent/
+          uri: https://github.com/Switch-vov/spring-cloud-config-repo/
           search-paths: config-repo
           username: username
           password: password
