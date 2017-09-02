@@ -1,0 +1,21 @@
+server:
+  port: 10360
+spring:
+  application:
+    name: zuul-api-gateway-dynamic-filter
+  http:
+    encoding:
+      force: true
+      enabled: true
+      charset: UTF-8
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+zuul:
+  filter:
+    # 动态加载过滤器存储路径
+    root: spring-cloud-zuul-api-gateway-dynamic-filter\target\classes\filter
+    # 动态加载时间间隔，单位：秒
+    interval: 5
+
