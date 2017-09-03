@@ -12,3 +12,4 @@ public class SpringCloudHelloFeignApplication {
         SpringApplication.run(SpringCloudHelloFeignApplication.class, args);
     }
 }
+5
