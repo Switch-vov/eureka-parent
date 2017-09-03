@@ -14,3 +14,7 @@ spring:
           search-paths: config-repo
           username: username
           password: password
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
