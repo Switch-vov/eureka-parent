@@ -48,6 +48,8 @@
         <module>spring-cloud-zuul-api-gateway-dynamic-route</module>
         <module>spring-cloud-zuul-api-gateway-dynamic-filter</module>
 
+        <!-- rabbit mq 测试项目 -->
+        <module>spring-cloud-rabbitmq-hello</module>
         <!-- ribbon 测试项目 -->
         <module>spring-cloud-ribbon-hystrix-test</module>
     </modules>
