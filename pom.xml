@@ -20,6 +20,7 @@
 
         <!-- config 客户端(使用者) -->
         <module>config-client</module>
+        <module>config-client-bus-rabbitmq</module>
 
         <!-- hello服务接口 -->
         <module>spring-cloud-hello-service-api</module>
