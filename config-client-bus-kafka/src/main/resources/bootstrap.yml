@@ -1,0 +1,28 @@
+server:
+  port: 11260
+spring:
+  application:
+    name: switch
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+      # 失败快速响应
+      fail-fast: true
+      # 重试
+      retry:
+        # 初始重试间隔时间
+        initial-interval: 1000
+        # 下一间隔的乘数
+        multiplier: 1.1
+        # 最大间隔时间
+        max-interval: 2000
+        # 最大重试次数
+        max-attempts: 6
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/localhost=5672

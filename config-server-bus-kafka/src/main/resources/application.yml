@@ -1,0 +1,20 @@
+server:
+  port: 11160
+spring:
+  application:
+    name: config-server
+  # 在该文件中覆盖敏感信息，比如账号密码
+  profiles:
+    active: secret
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Switch-vov/spring-cloud-config-repo/
+          search-paths: config-repo
+          username: username
+          password: password
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/

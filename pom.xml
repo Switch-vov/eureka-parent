@@ -18,10 +18,12 @@
         <!-- config 服务 -->
         <module>config-server</module>
         <module>config-server-bus-rabbitmq</module>
+        <module>config-server-bus-kafka</module>
 
         <!-- config 客户端(使用者) -->
         <module>config-client</module>
         <module>config-client-bus-rabbitmq</module>
+        <module>config-client-bus-kafka</module>
 
         <!-- hello服务接口 -->
         <module>spring-cloud-hello-service-api</module>

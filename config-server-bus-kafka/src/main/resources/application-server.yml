@@ -1,0 +1,58 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          # 可以使用客户端工具访问配置内容
+          # /{application}/{profile}[/{label}]
+          # /{application}-{profile}.yml
+          # /{application}-{profile}.properties
+          # /{label}/{application}-{profile}.yml
+          # /{label}/{application}-{profile}.properties
+          #
+          # file://${user.home}/config-repo，以本地仓库的方式运行，方便开发测试，正式环境不能用
+          # 占位符有{application}、{profile}、{label}
+          # https://github.com/Switch-vov/{application}-config/，可以使用占位符的方式实现一个应用对应一个git仓库
+          # {label}中如果含有“/”需要用“_”替代
+          uri: https://github.com/Switch-vov/spring-cloud-config-repo/
+          # 配置多个仓库
+          # 使用{application}/{profile}模式匹配
+          repos:
+            # 匹配{application}为dev,任何profile
+            dev:
+              pattern: dev/*
+              uri: file://home/git/config-repo
+            # 匹配{application}为test
+            test: https://github.com/Switch-vov/test/
+            # 匹配{application}为prod并且{profile}为pp开头的
+            # 匹配{application}为online并且{profile}为oo开头的
+            prod:
+              pattern: prod/pp*,online/oo*
+              uri: https://github.com/Switch-vov/prod/
+          # 配置子目录
+          search-paths: {application}
+          # 访问权限
+          username: username
+          password: password
+          # 配置本地仓库位置
+          basedir: ${user.home}/config-repo/{application}
+        # 健康监测，默认信息repositories: [{name=app, profiles=[default], label=master}]
+        health:
+          # 关闭健康监测
+          enabled: false
+          # map
+          repositories:
+            # name:应用名，label:分支名，profiles:环境名
+            check:
+              name: check-repo
+              label: master
+              profiles: default
+            check2:
+              name: check2-repo
+              label: master
+              profiles: default
+        # 属性覆盖(可以同来配置一些共同属性或是默认属性)
+        # 可以通过配置更高优先级的配置方式覆盖，比如环境变量
+        overrides:
+          name: switch
+          from: shenzhen
