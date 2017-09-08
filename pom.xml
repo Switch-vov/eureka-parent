@@ -17,6 +17,7 @@
 
         <!-- config 服务 -->
         <module>config-server</module>
+        <module>config-server-bus-rabbitmq</module>
 
         <!-- config 客户端(使用者) -->
         <module>config-client</module>
