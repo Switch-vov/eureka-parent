@@ -54,6 +54,10 @@
 
         <!-- rabbit mq 测试项目 -->
         <module>spring-cloud-rabbitmq-hello</module>
+
+        <!-- stream rabbitmq 测试项目 -->
+        <module>spring-cloud-stream-rabbitmq-hello</module>
+
         <!-- ribbon 测试项目 -->
         <module>spring-cloud-ribbon-hystrix-test</module>
     </modules>

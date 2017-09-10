@@ -1,0 +1,5 @@
+server:
+  port: 12160
+spring:
+  application:
+    name: stream-rabbitmq-hello
