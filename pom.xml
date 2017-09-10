@@ -52,6 +52,10 @@
         <module>spring-cloud-zuul-api-gateway-dynamic-route</module>
         <module>spring-cloud-zuul-api-gateway-dynamic-filter</module>
 
+        <!-- sleuth -->
+        <module>spring-cloud-sleuth-trace-1</module>
+        <module>spring-cloud-sleuth-trace-2</module>
+
         <!-- rabbit mq 测试项目 -->
         <module>spring-cloud-rabbitmq-hello</module>
 
