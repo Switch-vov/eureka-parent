@@ -3,3 +3,8 @@ server:
 spring:
   application:
     name: stream-rabbitmq-hello
+  cloud:
+    stream:
+      bindings:
+        input:
+          content-type: application/json
