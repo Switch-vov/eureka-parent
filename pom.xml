@@ -61,6 +61,7 @@
         <!-- zipkin 服务端 -->
         <module>spring-cloud-sleuth-zipkin-server</module>
         <module>spring-cloud-sleuth-zipkin-stream-rabbitmq-server</module>
+        <module>spring-cloud-sleuth-zipkin-stream-rabbitmq-mysql-server</module>
 
         <!-- rabbit mq 测试项目 -->
         <module>spring-cloud-rabbitmq-hello</module>
