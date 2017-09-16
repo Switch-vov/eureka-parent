@@ -14,6 +14,7 @@
     <modules>
         <!-- eureka 服务 -->
         <module>eureka-server</module>
+        <module>eureka-server-docker</module>
 
         <!-- config 服务 -->
         <module>config-server</module>
