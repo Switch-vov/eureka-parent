@@ -1,0 +1,6 @@
+version: '2' # 表示该docker-compose.yml文件使用的是Version 2 file format
+services:
+  eureka-service: # 指定服务名称
+    build: .    # 指定Dockerfile所在路径
+    ports:
+      - "91:91" # 指定端口映射，类似于docker run的-p选项，注意使用字符串形式
